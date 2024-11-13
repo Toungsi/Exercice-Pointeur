@@ -146,7 +146,7 @@ void supprime_caractere(char *chaine, char caractere) {
     int i = 0, j = 0;
     while (chaine[i] != '\0') {
         if (chaine[i] != caractere) {
-            chaine[j++] = chaine[i]; // Déplace le caractère si ce n'est pas celui à supprimer
+            chaine[j++] = chaine[i];
         }
         i++;
     }
@@ -161,10 +161,10 @@ int compte_mots(const char *phrase) {
 
     while (*phrase != '\0') {
         if (*phrase != ' ' && !dans_mot) {
-            dans_mot = true; // Début d'un nouveau mot
+            dans_mot = true;
             compteur++;
         } else if (*phrase == ' ') {
-            dans_mot = false; // Fin du mot actuel
+            dans_mot = false;
         }
         phrase++;
     }
